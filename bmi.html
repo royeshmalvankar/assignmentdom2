@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check your BMI</h1>
+    <h2>Enter your weight and height below to check your BMI result</h2>
+    <h2>Put your weight in here (KG)</h2>
+    <input type="Number" id="weight" placeholder="weight in kg">
+    <h2>Put your height in here (CM)</h2>
+    <input type="Number" id="height" placeholder="height in cms">
+    <br>
+    <button id="calc">Calculate BMI</button>
+    <h2>Your BMI is <span id="bm">number</span> means you are <span id="type">type</span></h2>
+</body>
+</html>
+<script>
+    let kg=document.getElementById("weight")
+    let cm=document.getElementById("height")
+    let btncalc=document.getElementById("calc")
+    let bmi=document.querySelector('#bm')
+    let typ=document.querySelector('#type')
+
+    btncalc.addEventListener('click',function()
+    {
+        let res=(Number(kg.value) / Number(cm.value) / Number(cm.value)) * Number(10000)
+        bmi.innerText=res.toFixed(2)
+        if(res <= 18.4)
+        {
+            typ.innerText="UnderWeight"
+        }
+        else if(res >= 18.5 && res <= 24.9)
+        {
+            typ.innerText="Normal Weight"
+        }
+        else if(res>= 25 && res <= 29.9)
+        {
+            typ.innerText="Overweight"
+        }
+        else
+        {
+            typ.innerText="Obese"
+        }
+    })
+
+</script>
