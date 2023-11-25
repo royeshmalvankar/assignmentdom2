@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #top{
+        /* border: 1px solid red; */
+        height: 200px;
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+    #top>div{
+        /* border: 1px solid blue; */
+        height: 200px;
+        width: 200px;
+        display: grid;
+        grid-template-rows: 150px 50px;
+
+       
+    }
+    #top>div>div{
+        /* border: 3px solid black; */
+        height: 145px;
+        width: 200px;
+        background-color: white;
+        
+    }
+    #top>div>div+div{
+        /* border: 1px solid violet; */
+        height: 50px;
+        width: 200px;
+        background-color: white;
+        
+    }
+    #scr{
+        /* border: 1px solid green; */
+        height: 200px;
+        width: 40%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    #scr>div{
+        /* border: 1px solid blue; */
+        height: 200px;
+        width: 300px;
+    }
+    #scr>div>div{
+        /* border: 1px solid violet; */
+        height: 50px;
+        width: 300px;
+        background-color: white;
+    }
+    #scr>div>div+div{
+        /* border: 3px solid black; */
+        height: 150px;
+        width: 300px;
+        background-color: white;
+    }
+
+
+    p{
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #calc{
+            /* border: 2px solid red; */
+            height: 900px;
+            width: 700px;
+            margin-left: 6.6%;
+            display: grid;
+            grid-template-columns: repeat(3,120px);
+            grid-template-rows: repeat(5,120px);
+            gap: 20px 20px;
+            justify-content: center;
+            align-content: center;
+            grid-template-areas: 
+            "b c d "
+            "e f h "
+            "i j k "
+            "n l o"
+            "m m m";
+        }
+        #calc>div{
+            /* border: 2px solid blue; */
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #calc>:nth-child(1){
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: b;
+        }
+        #calc>:nth-child(2){
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: c;
+        }
+        #calc>:nth-child(3){
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: d;
+        }
+        #calc>:nth-child(4){
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            grid-area: e;
+        }
+        #calc>:nth-child(5){
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: f;
+        }
+        #calc>:nth-child(6){
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: h;
+        }
+        #calc>:nth-child(7){
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: i;
+        }
+        #calc>:nth-child(8){
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: j;
+        }
+        #calc>:nth-child(9){
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: k;
+        }
+        #calc>:nth-child(10){
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: l;
+        }
+        #calc>:nth-child(11){
+            font-size: 40px;
+            font-weight: bolder;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: m;
+        }
+        #calc>:nth-child(12){
+            font-size: 40px;
+            font-weight: bolder;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: n;
+        }
+        #calc>:nth-child(13){
+            font-size: 40px;
+            font-weight: bolder;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: o;
+        }
+        #or{
+                cursor: pointer;
+                background-color: orange;
+                font-size: 40px;
+                border: 2px solid black;
+                color: black;
+                text-align: center;
+                border-radius: 20px;
+                width: 100%;
+                height: 100%;
+                transition: 0.04s ;
+                }
+        #or:hover{
+                background-color: lightsalmon;
+                color: blue;
+                font-weight: bolder;
+                }
+        #gr{
+                cursor: pointer;
+                background-color: green;
+                font-size: 40px;
+                border: 2px solid black;
+                color: black;
+                text-align: center;
+                border-radius: 20px;
+                width: 100%;
+                height: 100%;
+                transition: 0.04s ;
+                }
+        #gr:hover{
+                background-color: lightgreen;
+                color: blue;
+                font-weight: bolder;
+                }
+        #vo{
+                cursor: pointer;
+                background-color:purple;
+                font-size: 40px;
+                border: 2px solid black;
+                color: white;
+                text-align: center;
+                border-radius: 20px;
+                width: 100%;
+                height: 100%;
+                transition: 0.04s ;
+                }
+        #vo:hover{
+                background-color:pink;
+                color: blue;
+                font-weight: bolder;
+                }
+        #ent{
+                cursor: pointer;
+                background-color: black;
+                font-size: 40px;
+                border: 2px solid black;
+                color: white;
+                text-align: center;
+                border-radius: 20px;
+                width: 100%;
+                height: 100%;
+                transition: 0.04s ;
+                }
+        #ent:hover{
+                background-color: gray;
+                color: blue;
+                font-weight: bolder;
+                }
+        input[type="text"]{
+                height: 144px;
+                width: 293px;
+                text-align: center;
+                font-size: 100px;
+                background-color: gray;
+                }
+</style>
+<body>
+    <div id="top">
+        <div >
+            <div style="background-color: red;border: 3px solid black;">
+                <p id="minimun" style="font-size: 50px;">999</p>
+            </div>
+            <div >
+                <h1>MIN</h1>
+            </div>
+        </div>
+        <div >
+            <div style="background-color: green;border: 3px solid black;">
+            <p id="maximum" style="font-size: 50px;">00</p>
+            </div>
+            <div >
+            <h1>MAX</h1>
+            </div>
+        </div>
+
+    </div>
+    <div id="scr">
+        <div >
+            <div>
+                <h1>SCORE</h1>
+            </div>
+            <div >
+           <input id="display" type="text"  placeholder="#">
+            </div>
+        </div>
+    </div>
+    <div id="calc">
+       <div><button id="gr" class="bt">1</button></div>
+       <div><button id="or" class="bt">2</button></div>
+       <div><button id="gr" class="bt">3</button></div>
+       <div><button id="or" class="bt">4</button></div>
+       <div><button id="or" class="bt">5</button></div>
+       <div><button id="or" class="bt">6</button></div>
+       <div><button id="gr" class="bt">7</button></div>
+       <div><button id="or" class="bt">8</button></div>
+       <div><button id="gr" class="bt">9</button></div>
+       <div><button id="vo" class="bt">0</button></div>
+       <div><button id="ent">ENTER</button></div> 
+    </div>
+</body>
+</html>
+<script>
+    const dis=document.getElementById("display")
+    const mini=document.getElementById("minimum")
+    const maxi=document.getElementById("maximum")
+    const btn=document.querySelectorAll(".bt")
+    const ent=document.getElementById("ent")
+ 
+    let currentScore = "";
+    btn.forEach(button => {
+    button.addEventListener("click", () => {
+    currentScore += button.textContent;
+    dis.value = currentScore;
+    
+    console.log("display",dis.value)
+  });
+});
+ent.addEventListener("click", () => {
+  const score = parseInt(currentScore, 10);
+  console.log("sc",score)
+  console.log(mini.textContent)
+  console.log(maxi.textContent)
+  if (!isNaN(score)) {
+    if (score < parseInt(mini.textContent, 10)) {
+        console.log("mini",score)
+      mini.textContent = score;
+     
+    }
+    if (score > parseInt(maxi.textContent, 10)) {
+        console.log("maxi",score)
+      maxi.textContent = score;
+      console.log(maxi.textContent)
+    }
+    dis.value = "";
+    currentScore = "";
+  }
+});
+
+
+</script>
